@@ -1,10 +1,10 @@
 class RenderQueue
 {
-	public static var renders(default, null):Array<Dynamic> = [];
+	public static var renders(default, null):Array<Render> = [];
 
-	public static var requests(default, null):Array<Void->Void> = [];
+	public static var requests(default, null):Array<Void->Render> = [];
 
-	public static function addRequest(request:Void->Void)
+	public static function addRequest(request:Void->Render)
 	{
 		requests.push(request);
 	}
@@ -24,7 +24,10 @@ class RenderQueue
 				continue;
 			}
 
-			request();
+			var renderPiece:Render = request();
+
+			if (renderPiece != null)
+				renders.push(renderPiece);
 		}
 	}
 }

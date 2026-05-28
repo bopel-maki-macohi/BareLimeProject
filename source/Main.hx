@@ -9,7 +9,25 @@ class Main extends Application
 	{
 		super();
 
-		trace("Hello World");
+		RenderQueue.addRequest(defaultRender);
+	}
+
+	function defaultRender():Render
+	{
+		return {
+			x: 0,
+			y: 0,
+			width: window.width,
+			height: window.height,
+			color: 0xBFFF00,
+		}
+	}
+
+	override function onWindowCreate()
+	{
+		super.onWindowCreate();
+		
+		trace(window.context.type);
 	}
 
 	public override function render(context:RenderContext):Void
@@ -36,6 +54,7 @@ class Main extends Application
 
 				element.style.backgroundColor = "#BFFF00";
 
+			// (not lime_doc_gen) or flash
 			case FLASH:
 				var sprite = context.flash;
 
