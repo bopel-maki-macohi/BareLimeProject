@@ -71,6 +71,8 @@ class Main extends Application
 				gl.clearColor(0.75, 1, 0, 1);
 				gl.clear(gl.COLOR_BUFFER_BIT);
 
+				for (thing in RenderQueue.renders) {}
+
 			default:
 		}
 	}
