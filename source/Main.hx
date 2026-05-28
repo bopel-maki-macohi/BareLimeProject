@@ -3,15 +3,19 @@ package;
 import lime.app.Application;
 import lime.graphics.RenderContext;
 
-class Main extends Application {
-	public function new() {
+class Main extends Application
+{
+	public function new()
+	{
 		super();
 
 		trace("Hello World");
 	}
 
-	public override function render(context:RenderContext):Void {
-		switch (context.type) {
+	public override function render(context:RenderContext):Void
+	{
+		switch (context.type)
+		{
 			case CAIRO:
 				var cairo = context.cairo;
 
