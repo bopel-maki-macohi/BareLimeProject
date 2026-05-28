@@ -1,0 +1,9 @@
+{
+  "dependencies": [
+    {
+      "name": "lime",
+      "type": "haxelib",
+      "version": null
+    }
+  ]
+}
