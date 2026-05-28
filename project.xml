@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="Hello World" package="org.openfl.lime.samples.helloworld" version="1.0.0" company="OpenFL" />
-	<app main="Main" path="export" file="HelloWorld" />
+	<meta title="Bare Lime Project" package="com.maki.blp" version="0.1.0" company="Maki" />
+	<app main="Main" file="Bare Lime Project" />
+
+	<app path="export/release" />
+	<app path="export/debug" if="debug"/>
 	
 	<source path="source" />
 	<assets path="assets" />
