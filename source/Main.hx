@@ -14,6 +14,9 @@ class Main extends Application
 
 	public override function render(context:RenderContext):Void
 	{
+		RenderQueue.clear();
+		RenderQueue.request();
+
 		switch (context.type)
 		{
 			case CAIRO:
