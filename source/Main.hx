@@ -26,7 +26,11 @@ class Main extends Application
 	override function onWindowCreate()
 	{
 		super.onWindowCreate();
-		
+
+		/**
+		 * windows - opengl
+		 * html5 - webgl
+		 */
 		trace(window.context.type);
 	}
 
